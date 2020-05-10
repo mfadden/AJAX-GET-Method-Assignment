@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX GET Method</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script source src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          $.get("cd_catalog.xml", function(data){
+            $("#catalog").html(data);
+          })
+        })
+      })
+    </script>
+  </head>
+  <body>
+<button>Click me to get CD information!</button>
+
+<p id="catalog"></p>
+  </body>
+</html>
